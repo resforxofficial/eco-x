@@ -141,7 +141,7 @@
             $('form').on('submit', function (event) {
                 event.preventDefault();
                 const question = $('#question').val();
-                console.log(question);
+                // console.log(question);
 
                 $.ajax({
                     type: "POST",
@@ -157,7 +157,7 @@
                         $('#question').val('');
                     },
                     error: function (error) {
-                        console.error(String(error));
+                        console.error(error);
                         return;
                     }
                 });
