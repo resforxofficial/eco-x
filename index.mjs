@@ -45,15 +45,10 @@ const port = 3000;
 const app = express();
 
 app.use(cors());
-app.use(express.static(path.join(__dirname, ".", "html")));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "html", "index.html"));
-});
-
-app.get("/eco_games", (req, res) => {
-  res.sendFile(path.join(__dirname, ".", "html", "ecogame.html"));
+  res.sendFile(path.join(__dirname, ".", "index.html"));
 });
 
 app.post("/ask", async (req, res) => {
