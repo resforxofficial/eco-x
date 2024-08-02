@@ -41,7 +41,7 @@ const model = genAI.getGenerativeModel({
   generationConfig: { responseMimeType: "application/json" },
 });
 
-const port = 3000;
+const port = 3300;
 const app = express();
 
 app.use(cors());
