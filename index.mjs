@@ -73,7 +73,7 @@ app.post("/ask", async (req, res) => {
 
     res.json({ answer });
   } catch (e) {
-    console.error(String(e));
+    console.error(e);
     res.status(500).json({ error: "failed" });
   }
 });
